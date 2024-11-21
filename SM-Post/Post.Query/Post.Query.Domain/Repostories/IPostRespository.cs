@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Post.Query.Domain.Entities;
+
+namespace Post.Query.Domain.Repostories
+{
+    public interface IPostRespository
+    {
+        Task CreateAsync(PostEntity post);
+        Task UpdateAsync(PostEntity post);        
+        Task DeleteAsync(Guid postID);
+        Task<PostEntity> GetByIdAsync(Guid postID);
+        Task<List<PostEntity>> ListAllAsync();
+        Task<List<PostEntity>> LisByAuthorAsync(string author); 
+        Task<List<PostEntity>> LisWithLikesAsync(int numberOfLikes);
+        Task<List<PostEntity>> ListWithCommentsAsync();
+
+    }
+}
