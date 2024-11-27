@@ -14,8 +14,8 @@ namespace Post.Query.Domain.Repostories
         Task DeleteAsync(Guid postID);
         Task<PostEntity> GetByIdAsync(Guid postID);
         Task<List<PostEntity>> ListAllAsync();
-        Task<List<PostEntity>> LisByAuthorAsync(string author); 
-        Task<List<PostEntity>> LisWithLikesAsync(int numberOfLikes);
+        Task<List<PostEntity>> ListByAuthorAsync(string author); 
+        Task<List<PostEntity>> ListWithLikesAsync(int numberOfLikes);
         Task<List<PostEntity>> ListWithCommentsAsync();
 
     }
