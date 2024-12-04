@@ -1,11 +1,6 @@
 ﻿using Post.Common.Events;
 using Post.Query.Domain.Entities;
 using Post.Query.Domain.Repostories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Post.Query.Infrastructure.Handlers
 {

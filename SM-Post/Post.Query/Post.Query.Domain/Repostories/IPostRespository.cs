@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Post.Query.Domain.Entities;
+﻿using Post.Query.Domain.Entities;
 
 namespace Post.Query.Domain.Repostories
 {

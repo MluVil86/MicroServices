@@ -4,13 +4,7 @@ using CQRS.Core.Events;
 using Microsoft.Extensions.Options;
 using Post.Query.Infrastructure.Converts;
 using Post.Query.Infrastructure.Handlers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace Post.Query.Infrastructure.Consumers
 {
