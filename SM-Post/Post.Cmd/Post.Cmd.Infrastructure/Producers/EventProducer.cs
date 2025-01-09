@@ -16,6 +16,7 @@ namespace Post.Cmd.Infrastructure.Producers
 
             
         }
+
         public async Task ProduceAsync<T>(string topic, T @event) where T : BaseEvent
         {
             using (var producer = new ProducerBuilder<string, string>(_config)

@@ -10,7 +10,7 @@ using Post.Query.Infrastructure.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-Action<DbContextOptionsBuilder> configureDbContext = (o => o.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
+Action<DbContextOptionsBuilder> configureDbContext = o => o.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
 builder.Services.AddDbContext<DatabaseContext>(configureDbContext);
 builder.Services.AddSingleton<DatabaseContextFactory>(new DatabaseContextFactory(configureDbContext));
 
@@ -19,7 +19,7 @@ var dataContext = builder.Services.BuildServiceProvider().GetRequiredService<Dat
 dataContext.Database.EnsureCreated();
 
 builder.Services.AddScoped<IPostRespository, PostRepository>();
-builder.Services.AddScoped<ICommentRepository, ICommentRepository>();   
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();   
 builder.Services.AddScoped<IEventHandler, Post.Query.Infrastructure.Handlers.EventHandler>();
 builder.Services.Configure<ConsumerConfig>(builder.Configuration.GetSection(nameof(ConsumerConfig)));
 builder.Services.AddScoped<IEventConsumer, EventConsumer>();  
