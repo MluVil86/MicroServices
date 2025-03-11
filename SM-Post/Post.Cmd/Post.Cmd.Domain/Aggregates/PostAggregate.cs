@@ -17,7 +17,6 @@ namespace Post.Cmd.Domain.Aggregates
 
         public PostAggregate()
         {
-
         }
 
         public PostAggregate(Guid id, string author, string message)
